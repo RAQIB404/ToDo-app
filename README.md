@@ -1,3 +1,5 @@
+# Todo App
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -16,21 +18,50 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open [http://localhost:3000/api/tasks] with your browser to see the data in JSON format.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Prisma
 
-## Learn More
+To open Prisma Studio, run the following command:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx prisma studio
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:5555](http://localhost:5555) with your browser to see Prisma Studio.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Task Management
 
-## Deploy on Vercel
+### Add a Task
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To add a task, fill out the task form with the title, description, priority, status, and due date, then click the "Add Task" button.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Update a Task
+
+To update a task, click on the task you want to edit, modify the task details in the form, and click the "Update Task" button.
+
+### Delete a Task
+
+To delete a task, click on the delete button associated with the task you want to remove.
+
+## Kanban Board
+
+This application includes a Kanban board to help you manage your tasks visually. The Kanban board is divided into columns representing different stages of task completion, such as "TO-DO", "IN-PROGRESS", and "DONE".
+
+### Moving Tasks
+
+To move a task from one column to another, simply drag and drop the task card to the desired column. This will update the task's status accordingly.
+
+### Viewing Task Details
+
+Click on a task card to view its details. You can edit the task's title, description, priority, status, and due date from the task detail view.
+
+### Filtering Tasks
+
+Use the filter options to view tasks based on their priority, status, or due date. This helps you focus on specific tasks that need attention.
+
+### Task Notifications
+
+Receive notifications for upcoming due dates and task status changes to stay on top of your tasks.
+
+Enjoy managing your tasks with this intuitive Kanban board!
