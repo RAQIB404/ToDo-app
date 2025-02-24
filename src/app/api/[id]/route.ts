@@ -1,9 +1,9 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import prisma from "../../../../lib/prisma";
 
 
 export async function GET(
-  _req: Request,
+  _req: NextRequest,
   context: { params: { id: string } }
 ) {
   try {
