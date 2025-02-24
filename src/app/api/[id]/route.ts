@@ -7,6 +7,7 @@ export async function GET(req: Request, { params }: { params: { id: string } }) 
     if (!task) return NextResponse.json({ error: "Task not found" }, { status: 404 });
     return NextResponse.json(task);
   } catch (error) {
+    console.error("API Error:", error);
     return NextResponse.json({ error: "Failed to fetch task" }, { status: 500 });
   }
 }
@@ -41,6 +42,7 @@ export async function DELETE(req: Request, { params }: { params: { id: string } 
     await prisma.task.delete({ where: { id: params.id } });
     return NextResponse.json({ message: "Task deleted" });
   } catch (error) {
+    console.error("API Error:", error);
     return NextResponse.json({ error: "Failed to delete task" }, { status: 500 });
   }
 }

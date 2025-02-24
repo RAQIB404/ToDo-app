@@ -31,7 +31,7 @@ export default function LoginPage() {
       <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
       <button type="submit">Login</button>
       <Link href="/api/auth/signup">
-        <a>Don't have an account? Sign Up</a>
+        <a>Don&apos;st have an account? Sign Up</a>
       </Link>
     </form>
   );
